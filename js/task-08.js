@@ -7,14 +7,19 @@ form.addEventListener("submit", (e) => {
         elements: { email, password }
     } = e.currentTarget;
    
-
+    const loginData = {
+      email: email.value,
+      password: password.value,
+    };
 
     if (email.value === "" || password.value === "") {
       return alert(`Please fill all blank spaces`);
     }
-    console.log(`Email : ${email.value}, Password: ${password.value}`)
+  console.log(loginData);
+  
     form.reset();
-});
-
+  });
+  
+  // console.log(`Email : ${email.value}, Password: ${password.value}`)
 
 
